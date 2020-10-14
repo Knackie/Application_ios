@@ -20,6 +20,7 @@
 		5DDDEDA6253731E4002F766B /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDEDA5253731E4002F766B /* StudentModel.swift */; };
 		5DDDEDA825373378002F766B /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDEDA725373378002F766B /* StudentsTableViewController.swift */; };
 		5DDDEDAA25374789002F766B /* EditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDEDA925374789002F766B /* EditController.swift */; };
+		5DDDEDAC2537556E002F766B /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDEDAB2537556E002F766B /* StudentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5DDDEDA5253731E4002F766B /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 		5DDDEDA725373378002F766B /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		5DDDEDA925374789002F766B /* EditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditController.swift; sourceTree = "<group>"; };
+		5DDDEDAB2537556E002F766B /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				5DDDEDA5253731E4002F766B /* StudentModel.swift */,
 				5DDDEDA725373378002F766B /* StudentsTableViewController.swift */,
 				5DDDEDA925374789002F766B /* EditController.swift */,
+				5DDDEDAB2537556E002F766B /* StudentCell.swift */,
 			);
 			path = SchoolList6;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				5DDDEDAA25374789002F766B /* EditController.swift in Sources */,
 				5DDDED8C253724DF002F766B /* ViewController.swift in Sources */,
 				5DDDEDA6253731E4002F766B /* StudentModel.swift in Sources */,
+				5DDDEDAC2537556E002F766B /* StudentCell.swift in Sources */,
 				5DDDED88253724DF002F766B /* AppDelegate.swift in Sources */,
 				5DDDEDA825373378002F766B /* StudentsTableViewController.swift in Sources */,
 			);

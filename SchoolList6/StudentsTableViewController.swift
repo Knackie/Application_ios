@@ -14,7 +14,7 @@ class StudentsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad();
-        model = StudentModel();
+        model = (UIApplication.shared.delegate as! AppDelegate).model
 
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,13 +22,14 @@ class StudentsTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell")
-         cell?.textLabel?.text = model!.getStudentAtIndex(indexPath.row);
+        (cell as! StudentCell).studentName.text = model!.getStudentAtIndex(indexPath.row);
          return cell!;
     }
     override func prepare(for segue: UIStoryboardSegue, sender : Any?){
         let dest: EditController = segue.destination as! EditController;
-        let row:Int = tableView.indexPathForSelectedRow!.row
+        let row:Int = tableView.indexPathForSelectedRow!.row;
         let student: String = model!.getStudentAtIndex(row);
+        dest.row = row;
         dest.name = student;
     }
         
@@ -40,5 +41,7 @@ class StudentsTableViewController: UITableViewController {
            let newName: String = sourceViewController.nameField.text!;
         let row:Int = sourceViewController.row!;
         model!.setStudentAtIndex(row, withValue: newName);
-}
+        tableView.reloadData();
+        
+    }
 }
