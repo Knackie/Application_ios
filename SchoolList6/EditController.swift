@@ -11,6 +11,7 @@ import UIKit
 class EditController: UIViewController {
      
     var name:String?;
+    var row:Int?;
     
     @IBOutlet weak var nameField: UITextField!
     override func viewDidLoad() {

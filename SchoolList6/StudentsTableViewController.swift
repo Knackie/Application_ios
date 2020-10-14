@@ -22,12 +22,23 @@ class StudentsTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell")
-         cell?.textLabel?.text = model!.getStudentAtIndex(i: indexPath.row);
+         cell?.textLabel?.text = model!.getStudentAtIndex(indexPath.row);
          return cell!;
     }
     override func prepare(for segue: UIStoryboardSegue, sender : Any?){
         let dest: EditController = segue.destination as! EditController;
-        let student: String = (sender as! UITableViewCell).textLabel!.text!;
+        let row:Int = tableView.indexPathForSelectedRow!.row
+        let student: String = model!.getStudentAtIndex(row);
         dest.name = student;
     }
+        
+    @IBAction func unwindFromCancel( unwindSegue: UIStoryboardSegue) {}
+    
+    
+    @IBAction func unwindFromOK( unwindSegue: UIStoryboardSegue) {
+               let sourceViewController: EditController = unwindSegue.source as! EditController;
+           let newName: String = sourceViewController.nameField.text!;
+        let row:Int = sourceViewController.row!;
+        model!.setStudentAtIndex(row, withValue: newName);
+}
 }

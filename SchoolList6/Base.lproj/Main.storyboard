@@ -160,11 +160,17 @@
                                 <rect key="frame" x="20" y="103" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enfait non"/>
+                                <connections>
+                                    <segue destination="ngZ-zr-pra" kind="unwind" unwindAction="unwindFromCancelWithUnwindSegue:" id="YIk-AW-qmM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-ub-V3A">
                                 <rect key="frame" x="631" y="103" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Réserver"/>
+                                <connections>
+                                    <segue destination="ngZ-zr-pra" kind="unwind" unwindAction="unwindFromOKWithUnwindSegue:" id="UBq-gD-5D8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -175,6 +181,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybQ-6a-egP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ngZ-zr-pra" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2350" y="147.65625"/>
         </scene>

@@ -13,9 +13,14 @@ class StudentModel {
     
     
     
-    func getStudentAtIndex(i : Int) -> String {
-        return students[i];
+    func getStudentAtIndex(_ index: Int) -> String {
+        return students[index];
     }
+    
+    func setStudentAtIndex(_ index: Int, withValue : String){
+        students[index] = withValue;
+    }
+    
     func getStudentsCount() -> Int {
         return students.count;
     }
